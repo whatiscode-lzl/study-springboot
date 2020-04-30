@@ -2,6 +2,8 @@ package com.example.securoty01.controller;
 
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +19,11 @@ public class HelloController {
      * 可以看看这两个类的细节*/
     UserDetailsServiceAutoConfiguration userDetailsServiceAutoConfiguration;
     SecurityProperties securityProperties;
+    /**
+     * 密码加密
+     * Spring security 推荐使用 BCryptPasswordEncoder*/
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+    PasswordEncoder passwordEncoder;
     @GetMapping("/hello")
     public String hello(){
         return "hello";
