@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo.jpa" />
+        <module name="security03" />
         <module name="securoty01" />
         <module name="securoty02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo.jpa" target="1.8" />
+      <module name="security03" target="1.8" />
       <module name="securoty01" target="1.8" />
       <module name="securoty02" target="1.8" />
     </bytecodeTargetLevel>
